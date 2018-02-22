@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Game_15.iml" filepath="$PROJECT_DIR$/Game_15.iml" />
       <module fileurl="file://D:\Projects\Puzzle15\Game_15.iml" filepath="D:\Projects\Puzzle15\Game_15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Puzzle15.iml" filepath="$PROJECT_DIR$/Puzzle15.iml" />
       <module fileurl="file://C:\Users\Peter\Desktop\Andorid Studio\Game_15\Puzzle15.iml" filepath="C:\Users\Peter\Desktop\Andorid Studio\Game_15\Puzzle15.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\Projects\Puzzle15\app\app.iml" filepath="D:\Projects\Puzzle15\app\app.iml" />
     </modules>
   </component>
 </project>

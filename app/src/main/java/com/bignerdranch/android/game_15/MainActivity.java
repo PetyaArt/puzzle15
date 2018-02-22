@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int INT = 4;
@@ -28,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void shuffle(int iterations){
+        Random random = new Random(42);
+
+        for(int i = 0; i < iterations; i++){
+            int x = Math.abs(random.nextInt()) % 4;
+            int y = Math.abs(random.nextInt()) % 4;
+
+            checkButton(mButtons[x][y]);
+        }
+
+    }
 
     private void CreateMass(){
         for (int i = 0; i < INT; i++){
@@ -38,16 +53,17 @@ public class MainActivity extends AppCompatActivity {
         NULL = mButtons[3][3];
         mButtons[3][3].setVisibility(View.INVISIBLE);
 
+        shuffle(1000);
     }
 
     public void onMyButtonClick(View view) {
-        CheckButton(view);
-        if (CheckWin(view)){
+        checkButton(view);
+        if (checkWin(view)){
             Toast.makeText(this, "You win", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private boolean CheckWin(View view) {
+    private boolean checkWin(View view) {
         String[] array = getResources().getStringArray(R.array.array_button);
         int o = 0;
         boolean flag = false;
@@ -65,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         return flag;
     }
 
-    private void CheckButton(View view){
+    private void checkButton(View view){
         for (int i = 0; i < INT; i++){
             for (int j = 0; j < INT; j++){
                 if(NULL.getId() == mButtons[i][j].getId()) {

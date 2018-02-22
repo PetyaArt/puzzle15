@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Game_15</string>
+    <string name="button11">1</string>
+    <string name="button12">2</string>
+    <string name="button13">3</string>
+    <string name="button14">4</string>
+    <string name="button21">5</string>
+    <string name="button22">6</string>
+    <string name="button23">7</string>
+    <string name="button24">8</string>
+    <string name="button31">9</string>
+    <string name="button32">10</string>
+    <string name="button33">11</string>
+    <string name="button34">12</string>
+    <string name="button41">13</string>
+    <string name="button42">14</string>
+    <string name="button43">15</string>
+    <string name="button44">16</string>
+    <string-array name="array_button">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+
+</resources>

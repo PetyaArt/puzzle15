@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int INT = 4;
@@ -32,19 +36,31 @@ public class MainActivity extends AppCompatActivity {
     private Button NULL;
 
     private Button [][] mButtons = new Button[4][4];
-    private Button [][] mButtonsCheck = new Button[4][4];
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (button11 == null){
-            CreateMass();
+            createMass();
         }
     }
 
+    public void shuffle(int iterations){
+        Random random = new Random(42);
 
-    private void CreateMass(){
+        for(int i = 0; i < iterations; i++){
+            int x = Math.abs(random.nextInt()) % 4;
+            int y = Math.abs(random.nextInt()) % 4;
+
+            checkButton(mButtons[x][y]);
+        }
+
+    }
+
+    private void createMass(){
         button11 = findViewById(R.id.button11);
         mButtons[0][0] = button11;
         button12 = findViewById(R.id.button12);
@@ -84,17 +100,17 @@ public class MainActivity extends AppCompatActivity {
         NULL = button44;
         mButtons[3][3].setVisibility(View.INVISIBLE);
 
-        mButtonsCheck = mButtons.clone();
+        shuffle(1000);
     }
 
     public void onMyButtonClick(View view) {
-        CheckButton(view);
-        if (CheckWin(view)){
+        checkButton(view);
+        if (checkWin(view)){
             Toast.makeText(this, "You win", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private boolean CheckWin(View view) {
+    private boolean checkWin(View view) {
         String[] array = getResources().getStringArray(R.array.array_button);
         int o = 0;
         boolean flag = false;
@@ -112,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         return flag;
     }
 
-    private void CheckButton(View view){
+    private void checkButton(View view){
         for (int i = 0; i < INT; i++){
             for (int j = 0; j < INT; j++){
                 if(NULL.getId() == mButtons[i][j].getId()) {

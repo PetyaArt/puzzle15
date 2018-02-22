@@ -16,6 +16,7 @@
     <string name="button42">14</string>
     <string name="button43">15</string>
     <string name="button44">16</string>
+    <string name="buttonShuffle">Shuffle</string>
     <string-array name="array_button">
         <item>1</item>
         <item>2</item>

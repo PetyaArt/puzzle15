@@ -6,6 +6,21 @@
     tools:context="com.bignerdranch.android.game_15.MainActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="25dp">
+
+        <Button
+            android:id="@+id/buttonShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onShuffleClick"
+            android:text="@string/buttonShuffle" />
+    </LinearLayout>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,31 +33,31 @@
 
             <Button
                 android:id="@+id/button11"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button11" />
 
             <Button
                 android:id="@+id/button12"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button12" />
 
             <Button
                 android:id="@+id/button13"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button13" />
 
             <Button
                 android:id="@+id/button14"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button14"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button14" />
 
         </TableRow>
 
@@ -53,30 +68,30 @@
 
             <Button
                 android:id="@+id/button21"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button21"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button21" />
 
             <Button
                 android:id="@+id/button22"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button22"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button22" />
 
             <Button
                 android:id="@+id/button23"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button23"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button23" />
 
             <Button
                 android:id="@+id/button24"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button24" />
 
         </TableRow>
@@ -88,30 +103,30 @@
 
             <Button
                 android:id="@+id/button31"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button31"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button31" />
 
             <Button
                 android:id="@+id/button32"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="@string/button32"/>
+                android:onClick="onMyButtonClick"
+                android:text="@string/button32" />
 
             <Button
                 android:id="@+id/button33"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button33" />
 
             <Button
                 android:id="@+id/button34"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button34" />
 
         </TableRow>
@@ -123,33 +138,35 @@
 
             <Button
                 android:id="@+id/button41"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button41" />
 
             <Button
                 android:id="@+id/button42"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button42" />
 
             <Button
                 android:id="@+id/button43"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button43" />
 
             <Button
                 android:id="@+id/button44"
-                android:onClick="onMyButtonClick"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:onClick="onMyButtonClick"
                 android:text="@string/button44" />
 
         </TableRow>
 
+
     </TableLayout>
+
 </android.support.constraint.ConstraintLayout>

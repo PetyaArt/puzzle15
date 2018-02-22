@@ -1,5 +1,6 @@
 package com.bignerdranch.android.game_15;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,33 +28,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (mButtons == null){
-            CreateMass();
+        if (mButtons[0][0] == null){
+            createMass();
         }
     }
 
     public void shuffle(int iterations){
-        Random random = new Random(42);
+        final Random random = new Random();
 
         for(int i = 0; i < iterations; i++){
             int x = Math.abs(random.nextInt()) % 4;
             int y = Math.abs(random.nextInt()) % 4;
-
             checkButton(mButtons[x][y]);
         }
 
     }
 
-    private void CreateMass(){
+    public void onShuffleClick(View view) {
+        shuffle(100);
+    }
+
+    private void createMass(){
         for (int i = 0; i < INT; i++){
             for (int j = 0; j < INT; j++){
                 mButtons[i][j] = findViewById(img[i][j]);
             }
         }
+
         NULL = mButtons[3][3];
         mButtons[3][3].setVisibility(View.INVISIBLE);
 
-        shuffle(1000);
+        shuffle(100);
     }
 
     public void onMyButtonClick(View view) {
@@ -69,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         boolean flag = false;
         for (int i = 0; i < INT; i++){
             for (int j = 0; j < INT; j++){
-                if ((array[o]).equals(((TextView)mButtons[i][j]).getText().toString())){
+                if ((array[o]).equals(mButtons[i][j].getText().toString())){
                     flag = true;
                 }
-                else if(!((array[o]).equals(((TextView)mButtons[i][j]).getText().toString()))){
+                else if(!((array[o]).equals(mButtons[i][j].getText().toString()))){
                     return false;
                 }
                 o++;
@@ -125,5 +130,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }
